@@ -4,6 +4,7 @@ import static org.junit.Assert.*;
 
 import org.junit.BeforeClass;
 import org.junit.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import com.niit.collaborate.dao.BlogDAO;
@@ -12,7 +13,7 @@ import com.niit.collaborate.model.Blog;
 
 public class BlogDAOTestCase
 {
-	
+	@Autowired
 	static BlogDAO blogDAO;
 	
 	
@@ -32,15 +33,15 @@ public class BlogDAOTestCase
 	{
 		Blog blog=new Blog();
 		
-		blog.setBlogId(1001);
+		blog.setBlogId(14);
 		blog.setBlogName("Jithin");
 		blog.setBlogContent("Jithin is studying in niit with konkepudi");
 		blog.setUserid("jtnrdy@gmail.com");
 		blog.setCreateDate(new java.util.Date());
 		blog.setStatus("NA");
 		blog.setLikes(0);
-		
-		assertTrue("Problem in blog creation",blogDAO.createBlog(blog));
+		boolean flag = blogDAO.createBlog(blog);
+		assertEquals("Problem in blog creation",blogDAO.createBlog(blog));
 		
 	}
 
