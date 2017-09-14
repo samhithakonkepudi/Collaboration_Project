@@ -36,7 +36,7 @@ public class BlogDAOTestCase
 		blog.setBlogId(14);
 		blog.setBlogName("Jithin");
 		blog.setBlogContent("Jithin is studying in niit with konkepudi");
-		blog.setUserid("jtnrdy@gmail.com");
+		blog.setUserId("jtnrdy@gmail.com");
 		blog.setCreateDate(new java.util.Date());
 		blog.setStatus("NA");
 		blog.setLikes(0);

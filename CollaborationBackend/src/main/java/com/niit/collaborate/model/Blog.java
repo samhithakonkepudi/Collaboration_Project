@@ -13,11 +13,9 @@ public class Blog
 	@Id
 	private int blogId;
 	
-	private String blogName,blogContent,status,userid;
+	private String blogName,blogContent,status,userId;
 	private int likes;
 	private Date createDate;
-	
-	
 	public int getBlogId() {
 		return blogId;
 	}
@@ -42,11 +40,11 @@ public class Blog
 	public void setStatus(String status) {
 		this.status = status;
 	}
-	public String getUserid() {
-		return userid;
+	public String getUserId() {
+		return userId;
 	}
-	public void setUserid(String userid) {
-		this.userid = userid;
+	public void setUserId(String userId) {
+		this.userId = userId;
 	}
 	public int getLikes() {
 		return likes;
@@ -60,5 +58,9 @@ public class Blog
 	public void setCreateDate(Date createDate) {
 		this.createDate = createDate;
 	}
+	
+	
+	
+	
 	
 }
